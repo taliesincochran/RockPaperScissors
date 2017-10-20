@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Bootstrap CDN-->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="assets/css/style.css">
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+
+  	
+   
+</head>
+
+<body>
+	<div class="container">
+	      <div id="startModal" class="modal fade data-backdrop = "static" data-keyboard=false>
+	        <div class="modal-dialog">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <h4 class="modal-title">Sign in to play Rock Paper Scissors</h4>
+	                </div>
+	                <div class="modal-body">
+	                    <h1>Enter your name.</h1>
+	                    <form>
+	                        <div class="form-group">
+	                            <label for="newPlayerName">Player name.</label>
+	                            <input type="text" class="form-control" id="newPlayerName" placeholder="player name">
+	                        </div>
+	                        <button type="submit" id="submitNewPlayer" class="btn btn-default" data-dismiss='modal'>Start</button>
+	                        <p class='error'></p>
+	                  </form>  
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<div class = "container">
+		<div id= "rpsHeader" class = "row">
+			<h1>Rock Paper Scissors: Multiplayer</h1>
+			<h2>Local Player: <span class= "localPlayerName"></span></h2>
+			<h2>Remote Player: <span class= "remotePlayerName"></span></h2>
+			<h2 id="messageArea"></h2>
+		</div>
+		<div id= "playArea" class="row">
+			<div id="localPlayerBox" class = "box">
+				<div>
+					<p class="localPlayerName"></p>
+					<p>Player ID: <span class="localPlayerID"></span></p>
+					<!-- <p class='localPlayerChoice'></p> -->
+				</div>
+				<div id="buttonArea" class = "row">
+					<button class='choice btn btn-default disabled col-xs-4' id = 'rock' data-choice = "rock">Rock</button>
+					<button class='choice btn btn-default disabled col-xs-4' id = 'paper' data-choice = "paper">Paper</button>
+					<button class='choice btn btn-default disabled col-xs-4' id = 'scissors' data-choice = "scissors">Scissors</button>
+				</div>
+				<p>Wins: <span class = "localPlayerWins">0</span></p>
+				<p>Losses: <span class = "localPlayerLosses">0</span></p>
+			</div>
+			<div id="results" class = "box">
+				<div id = "resultsArea">
+					<p><span class='remotePlayerName'></span><br>chose: <span class="remotePlayerChoice hidden"></span></p>
+					<p><span class='localPlayerName'></span><br>chose: <span class="localPlayerChoice hidden"></span></p>
+					<p id = "resultsDisplay" class='hidden'></p>
+				</div>
+			</div>
+			<div id="remotePlayerBox" class = "box">
+				<p class="remotePlayerName"></p>
+				<p>Player ID: <span class="remotePlayerID"></span></p>
+				<div id="buttonArea" class = "row">
+					<button class='placeholder btn btn-default disabled col-xs-4'>Rock</button>
+					<button class='placeholder btn btn-default disabled col-xs-4'>Paper</button>
+					<button class='placeholder btn btn-default disabled col-xs-4'>Scissors</button>
+				</div>
+				<p>Wins: <span class = "remotePlayerWins"></span></p>
+				<p>Losses: <span class = "remotePlayerLosses"></span></p>
+
+
+			</div>
+		</div>
+		<div id="chatArea">
+		</div>
+		<div id="chatBox" class="row">
+		</div>
+		<div class="input-group" id="messageInputGroup">
+   			<input type="text" class="form-control" id="messageInput" placeholder="Type your message here. Hit enter end.">
+   			<input type='submit' class= 'btn btn-default' id="chatSubmit">
+   			</span>
+		</div>
+	</div>
+	
+  	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script type = "text/javascript" src="assets/javascript/app2.js"></script>
+</body>
+</html>

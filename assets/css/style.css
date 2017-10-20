@@ -1,0 +1,59 @@
+body {
+	background-image: url('../images/background.png');
+}
+.box {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    height: 200px;
+    background-color: yellow;
+    width: 26.333333333333%;
+    margin-left: 5%;
+    float: left;
+    margin-bottom: 20px;
+}
+.currentPlayerBox {
+	border-color: green;
+}
+#rpsHeader {
+	text-align: center;
+}
+#playerName-submit {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.box {
+	background-color: black;
+	color: white;
+}
+#chatBox {
+	height: 100px;
+	overflow-y: scroll;
+	word-wrap: break-word;
+	width: 80%;
+	margin-left:10%;
+	height: 100px;
+	background-color: black;
+	margin-bottom: 20px;
+	color: white;
+}
+#playerNameInputGroup {
+	width: 60%;
+	margin-left: 20%;
+	margin-bottom: 20px;
+}
+#messageInputGroup {
+	width: 80%;
+	margin-left: 10%;
+}
+.hidden {
+	display: none;
+}
+.choice,
+.placeholder
+ {
+    width: 23%;
+    margin-left: 7.75%;
+    font-size: .6em;
+    text-align: center;
+}
