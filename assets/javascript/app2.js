@@ -40,6 +40,11 @@
 			game.compare();
 		}
 	})
+	$("#messageInput").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#chatSubmit").click();
+    }
+	});
 	var game = {
 		'rpsArr': ['rock','paper','scissors'],
 		//local player
@@ -131,10 +136,13 @@
 				newSpacer.text(" says: ").appendTo(newDiv);
 				var newMessage = $("<span>");
 				newMessage.text(newChat.message).appendTo(newDiv);
-				$('#chatBox').prepend(newDiv);
+				$('#chatBox').append(newDiv);
+				var textarea = document.getElementById('chatBox');
+				textarea.scrollTop = textarea.scrollHeight;
 			});
 			$("#chatSubmit").on("click", function() {
 				var chatMessage = $("#messageInput").val();
+				$('#messageInput').val('');
 				chatRef.push({
 					"name": game.lP.name,
 					"message": chatMessage,

@@ -1,5 +1,7 @@
 body {
 	background-image: url('../images/background.png');
+	background-size: 100%;
+	background-repeat: repeat-y;
 }
 .box {
     border-color: black;
@@ -12,6 +14,17 @@ body {
     float: left;
     margin-bottom: 20px;
 }
+#rpsHeader {
+	color: floralwhite
+	;
+}
+#chatBox {
+	opacity: 0.75;
+}
+#playArea {
+	opacity: 0.75;
+}
+
 .currentPlayerBox {
 	border-color: green;
 }
@@ -54,6 +67,14 @@ body {
  {
     width: 23%;
     margin-left: 7.75%;
+    margin-bottom: 12px;
     font-size: .6em;
     text-align: center;
+}
+#chatSubmit {
+	margin-top: 20px;
+}
+.buttonText {
+	margin-left: -3.5px;
+	text-align: center;
 }

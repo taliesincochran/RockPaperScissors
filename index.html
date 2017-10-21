@@ -57,9 +57,9 @@
 					<!-- <p class='localPlayerChoice'></p> -->
 				</div>
 				<div id="buttonArea" class = "row">
-					<button class='choice btn btn-default disabled col-xs-4' id = 'rock' data-choice = "rock">Rock</button>
-					<button class='choice btn btn-default disabled col-xs-4' id = 'paper' data-choice = "paper">Paper</button>
-					<button class='choice btn btn-default disabled col-xs-4' id = 'scissors' data-choice = "scissors">Scissors</button>
+					<button class='choice btn btn-default disabled col-xs-4' id = 'rock' data-choice = "rock"><span class='buttonText'>Rock</span></button>
+					<button class='choice btn btn-default disabled col-xs-4' id = 'paper' data-choice = "paper"><span class='buttonText'>Paper</span></button>
+					<button class='choice btn btn-default disabled col-xs-4' id = 'scissors' data-choice = "scissors"><span class='buttonText'>Scissors</span></button>
 				</div>
 				<p>Wins: <span class = "localPlayerWins">0</span></p>
 				<p>Losses: <span class = "localPlayerLosses">0</span></p>
@@ -75,9 +75,9 @@
 				<p class="remotePlayerName"></p>
 				<p>Player ID: <span class="remotePlayerID"></span></p>
 				<div id="buttonArea" class = "row">
-					<button class='placeholder btn btn-default disabled col-xs-4'>Rock</button>
-					<button class='placeholder btn btn-default disabled col-xs-4'>Paper</button>
-					<button class='placeholder btn btn-default disabled col-xs-4'>Scissors</button>
+					<button class='placeholder btn btn-default disabled col-xs-4'><span class='buttonText'>Rock</span></button>
+					<button class='placeholder btn btn-default disabled col-xs-4'><span class='buttonText'>Paper</span></button>
+					<button class='placeholder btn btn-default disabled col-xs-4'><span class='buttonText'>Scissors</span></button>
 				</div>
 				<p>Wins: <span class = "remotePlayerWins"></span></p>
 				<p>Losses: <span class = "remotePlayerLosses"></span></p>
@@ -85,12 +85,10 @@
 
 			</div>
 		</div>
-		<div id="chatArea">
-		</div>
 		<div id="chatBox" class="row">
 		</div>
 		<div class="input-group" id="messageInputGroup">
-   			<input type="text" class="form-control" id="messageInput" placeholder="Type your message here. Hit enter end.">
+   			<input type="text" class="form-control" id="messageInput" placeholder="Type your message here. Hit enter send.">
    			<input type='submit' class= 'btn btn-default' id="chatSubmit">
    			</span>
 		</div>
