@@ -35,7 +35,7 @@
 		game.hideButtons();
 		game.lP.turn = 2;
 		console.log(game.lP.choice);
-		$(".localPlayerChoice").removeClass('hidden');
+		$(".localPlayerChoice").removeClass('hidden').text(game.lP.choice);
 		if(game.rP.choice !== 0) {
 			game.compare();
 		}
@@ -304,7 +304,7 @@
 				console.log('start new executed');
 				$('#resultsDisplay').addClass('hidden');
 				$(".localPlayerChoice").addClass('hidden');
-				$(".remotePlayerChoice").removeClass('hidden');
+				$(".remotePlayerChoice").addClass('hidden');
 				game.showButtons();
 				$('remotePlayerChoice').text('');
 				console.log('start new turn');
