@@ -65,6 +65,7 @@ body {
 .choice,
 .placeholder
  {
+ 	opacity: 1.5;
     width: 23%;
     margin-left: 7.75%;
     margin-bottom: 12px;
@@ -77,4 +78,5 @@ body {
 .buttonText {
 	margin-left: -3.5px;
 	text-align: center;
+	font-weight: bolder;
 }

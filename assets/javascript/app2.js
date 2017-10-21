@@ -99,19 +99,14 @@
 			$("#startModal").modal("show");
 		    //click button to hide modal an submit name
 		    $("#submitNewPlayer").on("click", function (event) {
-		        event.preventDefault();
-		        //if there is a name in the field hide the modal
-		        if($("#newPlayerName" !== "")) {            
-		            //get the value of the name and store it in localPlayer.name
-		            game.lP.name = $("#newPlayerName").val().trim();
-		            $(".localPlayerName").text(game.lP.name);
-		            $('.error').text("Waiting on remote player.");
-		            $(".remotePlayerName").text("Waiting on remote player.")
-					game.listener();
-		        } else {
-		        	$("#startModal").modal('show');
-		        	$(".error").text("Please enter a name.");
-		        }
+		        event.preventDefault();   
+		        //get the value of the name and store it in localPlayer.name
+	            game.lP.name = $("#newPlayerName").val().trim();
+	            $(".localPlayerName").text(game.lP.name);
+	            $('.error').text("Waiting on remote player.");
+	            $(".remotePlayerName").text("Waiting on remote player.")
+				game.listener();
+		   
 		    })
 		},
 		updateFirebase: function() {
